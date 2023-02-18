@@ -89,7 +89,7 @@ body {
     height: 30px;
 }
 .search #find {
-    background-image: url(/img/find.png);
+    background-image: url(Web/img/find.png);
     background-size: 20px;
     background-repeat: no-repeat;
     background-position: center;
