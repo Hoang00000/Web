@@ -1,0 +1,679 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif
+}
+body {
+    background-color: white;
+}
+.menungang {
+    width: 100%;
+    height: 60px;
+    background-color: white;
+    box-shadow: 2px 2px 6px black;
+    position: fixed;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.menungang-left {
+    padding: 20px 30px;
+    display: inline-block;
+    color: black;
+}
+.menungang-right {
+    float: right;
+    padding: 0px 30px;
+}
+.menungang-right #logo {
+    transform: translateY(5%)
+}
+.menungang-left a {
+    color: black;
+    text-decoration: none;
+    padding: 5 20px;
+    position: relative;
+}
+.menungang-left a::after {
+    content: "";
+    width: 70%;
+    height: 2px;
+    background-color: black;
+    position: absolute;
+    bottom: 0;
+    left: 18;
+    transform: scaleX(0);
+    transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.menungang-left a:hover::after, #pin::after {
+    transform: scaleX(1);
+}
+
+
+.menungang-right a {
+    color: black;
+    text-decoration: none;
+    padding: 5 20px;
+    position: relative;
+    bottom: 20;
+}
+.menungang-right a:after {
+    content: "";
+    width: 70%;
+    height: 2px;
+    background-color: black;
+    position: absolute;
+    bottom: 0;
+    left: 18;
+    transform: scaleX(0);
+    transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.menungang-right a:hover::after{
+    transform: scaleX(1);
+}
+
+
+.search {
+    display: inline-block;
+    position: relative;
+    transform: translate(0%,25%);
+}
+.search #search {
+    border: solid 1px black;
+    border-radius: 10px;
+    background-color: rgb(240, 240, 240);
+    width: 250px;
+    padding: 5px;
+    height: 30px;
+}
+.search #find {
+    background-image: url(/img/find.png);
+    background-size: 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding-left: 50px;
+    width: 40px;
+    height: 28px;
+    border: none;
+    border-radius: 9px;
+    position: absolute;
+    right: 1px;
+    top: 1px;
+    transform: translate(0%,1.5%);
+    transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.search #find:hover{
+    position: absolute;
+    padding-left: 100px;
+    background-color: #58b8f5;
+}
+
+.banner {
+    position: fixed;
+    width: 100%;
+    display: flex;
+    top: 180px;
+    justify-content: space-between;
+    padding: 10px;
+    z-index: -1;
+}
+.banner img {
+    width: 150px;
+    border-radius: 5px;
+}
+.backtotop {
+    position: fixed;
+    z-index: 1;
+    top: 90%;
+    left: 90%;
+}
+.backtotop img {
+    width: 50px;
+    height: 50px;
+}
+.content1 {
+    width: 1170px;
+    height: auto;
+    background-color: white;
+    margin: 0px 175px;
+    margin-bottom: 100px;
+    position: relative;
+    top: 70px;
+    
+}
+.danhmucsp img  {
+    transform: translate(-10%,30%);
+}
+.danhmucsp p img {
+    transform: translate(0%,20%);
+}
+.danhmucsp p{
+    padding: 1px 0px;
+}
+.danhmucsp {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 200px;
+    height: 400px;
+    background-color: rgb(240, 240, 240);
+    border-radius: 10px;
+}
+.danhmucsp p{
+    font-weight: bold;
+    padding: 10px 10px;
+    background-color: #505050;
+    color: #f1f0f1;
+    border-radius: 10px;
+    transform: translateY(20%);
+}
+.danhmucsp a {
+    width: 180px;
+    color: gray;
+    text-decoration: none;
+    padding: 10px;
+    z-index: 1;
+}
+.danhmucsp a:hover{
+    color: black;
+}
+
+.event-khung {
+    position: absolute;
+}
+.event {
+    width: 700px;
+    height: 390px;
+    overflow: hidden;
+    position: absolute;
+    bottom: 0;
+    left: 210px;
+    border-radius: 8px;
+    box-shadow: 1px 1px 5px;
+}
+.wrapper {
+    width: 100%;
+    display: flex;
+    animation: slide 15s infinite ;
+}
+.wrapper img{
+    width: 100%;
+}
+@keyframes slide {
+    0%{
+        transform: translateX(0);
+    }
+    20%{
+        transform: translateX(0);
+    }
+    25%{
+        transform: translateX(-100%);
+    }
+    45%{
+        transform: translateX(-100%);
+    }
+    50%{
+        transform: translateX(-200%);
+    }
+    70%{
+        transform: translateX(-200%);
+    }
+    75%{
+        transform: translateX(-300%);
+    }
+    95%{
+        transform: translateX(-300%);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+
+.event2{
+    width: 250px;
+    height: 390px;
+    box-shadow: 1px 1px 3px;
+    position: absolute;
+    overflow: hidden;
+    border-radius: 10px;
+    top: 10px;
+    left: 920px;
+}
+.event2 img{
+    width: 100%;
+}
+
+.namethuonghieu {
+    width: auto;
+    padding: 10px;
+    margin-top: 20px;
+    margin-bottom: 5px;
+    color: azure;
+    border-radius: 10px;
+}
+.thuonghieu {
+    overflow: hidden;
+    border-radius: 8px;
+    border-left: solid 1px;
+    border-right: solid 1px;
+}
+#thuonghieu {
+    background: rgb(1,3,113);
+    background: linear-gradient(90deg, rgba(1,3,113,1) 0%, rgba(36,183,194,1) 50%, rgba(39,193,141,1) 100%);
+}
+#lapvanphong {
+    background: rgb(58,180,139);
+    background: linear-gradient(90deg, rgba(58,180,139,1) 0%, rgba(88,29,253,1) 50%, rgba(228,69,252,1) 100%);
+}
+#lapgaming {
+    background: rgb(180,58,58);
+    background: linear-gradient(90deg, rgba(180,58,58,1) 0%, rgba(253,130,29,1) 50%, rgba(219,69,252,1) 100%);
+}
+#Macbook {
+    background: rgb(0,0,0);
+    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(144,144,144,1) 75%, rgba(255,255,255,1) 100%);
+}
+#phukien {
+    background: rgb(227,62,26);
+    background: linear-gradient(90deg, rgba(227,62,26,1) 0%, rgba(255,146,45,1) 54%, rgba(224,185,42,1) 100%);
+}
+#tainghe {
+    background: rgb(21,161,32);
+    background: linear-gradient(90deg, rgba(21,161,32,1) 0%, rgba(45,255,143,1) 54%, rgba(42,138,224,1) 100%);
+}
+.thuonghieu-content {
+    width: 1170px;
+    display: flex;
+    animation: slide2 20s infinite;
+}
+@keyframes slide2 {
+    0%{
+        transform: translateX(0%);
+    }
+    17% {
+        transform: translateX(0%);
+    }
+    20%{
+        transform: translateX(-27%);
+    }
+    37%{
+        transform: translateX(-27%);
+    }
+    40%{
+        transform: translateX(-54%);
+    }
+    57%{
+        transform: translateX(-54%);
+    }
+    60%{
+        transform: translateX(-81%);
+    }
+    77%{
+        transform: translateX(-81%);
+    }
+    80%{
+        transform: translateX(-108%);
+    }
+    97%{
+        transform: translateX(-108%);
+    }
+    100%{
+        transform: translateX(-136.7%);
+    }
+}
+.thuonghieu-content div{
+    padding: 10px 20px;
+    text-align: center;
+    font-weight: bold;
+
+}
+.thuonghieu-content img{
+    width: 280px;
+    height: 150px;
+    border-radius: 10px;
+    transition: all 0.3s;
+}
+.thuonghieu-content img:hover {
+    transform: scale(1.05);
+}
+.thuonghieu-content p {
+    padding: 10px;
+}
+.sanphamlaptop {
+    width: 100%;
+    border-left: solid 1px;
+    border-right: solid 1px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.sanphamlaptop-item{
+    display: flex;
+    width: 1170px;
+    height: auto;
+    flex-wrap: wrap;
+    justify-content: left;
+}
+.sanphamlaptop-sp {
+    width: 270px;
+    height: auto;
+    text-align: center;
+    background-color: rgb(240, 240, 240);
+    border-radius: 5px;
+    margin: 10px;
+    text-decoration: none;
+    color: black;
+}
+.sanphamlaptop-sp:hover{
+    text-decoration: underline;
+}
+.sanphamlaptop-sp img{
+    width: 100%;
+    mix-blend-mode: darken;
+}
+#price {
+    color: red;
+    padding-bottom: 15px;
+}
+
+
+.end {
+    background-color: #f4f8fa;
+    position: relative;
+    width: 100%;
+    height: 220px;
+    display: flex;
+    padding-top: 10px;
+}
+.chinhsach {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin: 10px 50px;
+}
+.hotrokhachhang {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin: 10px 50px;
+}
+.phuongthuc {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin: 10px 50px;
+}
+.phuongthuc-item {
+    display: flex;
+    gap: 10px;
+    text-align: center;
+}
+.end a{
+    color: black;
+    text-decoration: none;
+}
+.end a:hover{
+    text-decoration: underline;
+}
+.phuongthuc-item span{
+    font-size: 15px;
+}
+
+
+
+
+
+/* phần code của sanpham.html */
+
+.anhsanpham img {
+    width: 100%;
+}
+.khungsanpham {
+    overflow: hidden;
+    width: 700px;
+    height: 400px;
+}
+.anhsanpham {
+    display: flex;
+    animation: slide3 15s infinite;
+}
+@keyframes slide3 {
+    0%{
+        transform: translateX(0);
+    }
+    20%{
+        transform: translateX(0);
+    }
+    25%{
+        transform: translateX(-100%);
+    }
+    45%{
+        transform: translateX(-100%);
+    }
+    50%{
+        transform: translateX(-200%);
+    }
+    70%{
+        transform: translateX(-200%);
+    }
+    75%{
+        transform: translateX(-300%);
+    }
+    95%{
+        transform: translateX(-300%);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+.sanphammota {
+    display: flex;
+    gap: 50px;
+    padding-top: 20px;
+}
+.contentsanpham h2 {
+    padding: 5px 0;
+    color: red;
+}
+.contentsanpham input {
+    width: 200px;
+    height: 40px;
+    border: none;
+    background-color: #fe844d;
+    font-size: 14px;
+    color: white;
+    margin: 10px 0px;
+    margin-right: 10px;
+    box-shadow: inset 0 0 0 0 rgb(97, 97, 252);
+    transition: ease-out 0.2s;
+}
+
+.contentsanpham input:hover{
+    box-shadow: inset 200px 0 0 0 rgb(97, 97, 252);
+    cursor: pointer;
+}
+.contentsanpham table {
+    padding: 10px 0;
+}
+.contentsanpham th,td {
+    padding: 5px;
+    border-radius: 3px;
+}
+.contentsanpham th{
+    background-color: #bababa65;
+}
+.contentsanpham td {
+    background-color: #eeeeee;
+}
+.contentsanpham1 h2 {
+    padding: 20px 0;
+}
+.contentsanpham1 h3{
+    padding: 5px 0;
+
+}
+.contentsanpham1 img {
+    width: 50%;
+    display: block;
+    margin: auto;
+    border-radius: 5px;
+}
+
+/* phần code của gioithieu.html */
+
+.contentgioithieu h1 {
+    text-align: center;
+    padding: 5px;
+}
+.contentgioithieu h3{
+    padding: 5px;
+}
+.contentgioithieu p {
+    padding: 5px 0;
+}
+.contentgioithieu img {
+    display: block;
+    margin: auto;
+    border-radius: 5px;
+}
+#gioithieu1 {
+    float: right;
+}
+#content1-gioithieu {
+    display: flex;
+    gap: 20px;
+}
+.thongtinchitiet {
+    padding-top: 50px;
+}
+.thongtinchitiet h3 {
+   border-bottom: solid 2px black;
+   margin-bottom: 10px;
+   padding-bottom: 5px;
+}
+.thongtinchitiet table tr td:nth-child(1) {
+    background-color: #bababa65;
+}
+.thongtinchitiet table tr td:nth-child(2) {
+    background-color: #eeeeee;
+}
+.thongtinchitiet table tr td {
+    padding: 10px;
+}
+
+/* phần code của lienhe.html */
+.contentlienhe {
+    background-color: #58b8f5;
+    padding-top: 100px ;
+    display: flex;
+}
+.contentlienhe img{
+    width: 700px;
+}
+.contentlienhe .text input {
+    width: 178px;
+    height: 50px;
+    border: none;
+    border-radius: 5px;
+    margin-right: 10px;
+    padding: 5px;
+}
+.contentlienhe .send input {
+    width: 100px;
+    height: 30px;
+    border: none;
+    background-color: #eeeeee;
+    cursor: pointer;
+    border-radius: 10px;  
+    font-size: 14px;  
+    transition: all 0.5s;
+}
+.send input:hover {
+    background-color: aliceblue;
+    box-shadow: 2px 2px 5px;
+}
+.contentlienhe-item {
+    width: 50%;
+}
+textarea {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+.contentlienhe-item form {
+    padding: 50px 100px;
+}
+.contentlienhe-item div {
+    margin: 10px 0;
+}
+
+.lienheend {
+    position: fixed;
+    top: 210px;
+    left: 96.5%;
+    display: flex;
+    flex-direction: column;
+    background-color: #eeeeee;
+    padding: 10px;
+    border-radius: 15px 0px 0 15px;
+}
+.lienheend img {
+    width: 40px;
+    padding: 3px;
+}
+.lienheend #facebook::after {
+    content: "Facebook ->";
+    color: blue;
+    width: 90px;
+    background-color: #eeeeee;
+    position: absolute;
+    padding: 10px;
+    border-radius: 10px;
+    opacity: 0;
+    transition: all 0.3s cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+.lienheend #facebook:hover::after {
+    transform: translateX(-135%);
+    opacity: 100;
+}
+.lienheend #youtube::after {
+    content: "Youtube ->";
+    color: red;
+    width: 80px;
+    background-color: #eeeeee;
+    position: absolute;
+    padding: 10px;
+    border-radius: 10px;
+    opacity: 0;
+    transition: all 0.3s cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+.lienheend #youtube:hover::after {
+    transform: translateX(-138%);
+    opacity: 100;
+}
+.lienheend #instagram::after {
+    content: "Instagram ->";
+    color: purple;
+    width: 91px;
+    background-color: #eeeeee;
+    position: absolute;
+    padding: 10px;
+    border-radius: 10px;
+    opacity: 0;
+    transition: all 0.3s cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+.lienheend #instagram:hover::after {
+    transform: translateX(-138%);
+    opacity: 100;
+}
+
+.copyright{
+    font-size: larger;
+    text-align: center;
+    background-color: #f4f8fa;
+    padding-bottom: 20px;
+}
